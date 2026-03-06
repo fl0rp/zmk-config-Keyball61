@@ -51,12 +51,8 @@
 
 // #include <input/processors/xyz.dtsi>
 
-// &trackball_split {
-//     device = <&trackball>;
-//     input-processors = <&zip_xyz>;
-// };
-
 &trackball_listener {
-    device = <&trackball>;
     status = "okay";
+    device = <&trackball>;
+    input-processors = <&zip_xyz>, <&zip_temp_layer 4 2000>;
 };

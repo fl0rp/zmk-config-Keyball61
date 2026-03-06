@@ -13,15 +13,15 @@
 };
 
 / {
-    // split_inputs {
-    //     #address-cells = <1>;
-    //     #size-cells = <0>;
+    split_inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
 
-    //     trackball_split: trackball_split@0 {
-    //         compatible = "zmk,input-split";
-    //         reg = <0>;
-    //     };
-    // };
+        trackball_split: trackball_split@0 {
+            compatible = "zmk,input-split";
+            reg = <0>;
+        };
+    };
 
     to_wheel: to_wheel {
         compatible = "zmk,input-processor-code-mapper";
@@ -34,11 +34,10 @@
     trackball_listener: trackball_listener {
         status = "disabled";
         compatible = "zmk,input-listener";
-        // device = <&trackball_split>;
-        input-processors = // <&zip_zxy>,
-                            <&zip_temp_layer 3 2000>;
+        device = <&trackball_split>;
+        input-processors = <&zip_temp_layer 4 2000>;
         scroll {
-            layers = <4>;
+            layers = <5>;
             process-next;
             input-processors = <&zip_xy_scaler 1 25>, <&zip_x_scaler 0 1>
                             , <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>
