@@ -13,16 +13,6 @@
 };
 
 / {
-    split_inputs {
-        #address-cells = <1>;
-        #size-cells = <0>;
-
-        trackball_split: trackball_split@0 {
-            compatible = "zmk,input-split";
-            reg = <0>;
-        };
-    };
-
     to_wheel: to_wheel {
         compatible = "zmk,input-processor-code-mapper";
         #input-processor-cells = <0>;
@@ -34,7 +24,6 @@
     trackball_listener: trackball_listener {
         status = "disabled";
         compatible = "zmk,input-listener";
-        device = <&trackball_split>;
         input-processors = <&zip_temp_layer 4 2000>;
         scroll {
             layers = <5>;
