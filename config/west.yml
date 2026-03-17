@@ -2,18 +2,13 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: badjeff
-      url-base: https://github.com/badjeff
     - name: andre-tm-hui
       url-base: https://github.com/andre-tm-hui
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: v0.3
       import: app/west.yml
-    - name: zmk-input-processor-xyz
-      remote: badjeff
-      revision: main
     - name: zmk-pmw3XXX-driver
       remote: andre-tm-hui
       revision: pmw3360
