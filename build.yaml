@@ -13,10 +13,10 @@
 #
 ---
 include:
-  - board: nice_nano_v2
+  - board: nice_nano_v2/nrf52840
     shield: keyball61_left
-  - board: nice_nano_v2
+  - board: nice_nano_v2/nrf52840
     shield: keyball61_right
     snippet: studio-rpc-usb-uart
-  - board: nice_nano_v2
+  - board: nice_nano_v2/nrf52840
     shield: settings_reset
