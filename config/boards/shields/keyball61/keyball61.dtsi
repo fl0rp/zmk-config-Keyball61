@@ -23,7 +23,6 @@
     trackball_listener: trackball_listener {
         status = "disabled";
         compatible = "zmk,input-listener";
-        input-processors = <&zip_temp_layer 4 2000>;
         scroll {
             layers = <5>;
             process-next;
