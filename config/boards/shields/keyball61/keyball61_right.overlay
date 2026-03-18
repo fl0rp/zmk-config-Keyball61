@@ -26,7 +26,7 @@
 
 };
 
-&pro_micro_spi {
+&spi0 {
     status = "okay";
     compatible = "nordic,nrf-spim";
     pinctrl-0 = <&spi0_default>;
@@ -39,7 +39,6 @@
         compatible = "pixart,pmw3360";
         reg = <0>;
         spi-max-frequency = <2000000>;
-        irq-gpios = <&gpio1 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 
         cpi = <500>;
         evt-type = <INPUT_EV_REL>;
