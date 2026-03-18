@@ -2,15 +2,15 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: andre-tm-hui
-      url-base: https://github.com/andre-tm-hui
+    - name: fl0rp
+      url-base: https://github.com/fl0rp
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: v0.3
       import: app/west.yml
     - name: zmk-pmw3XXX-driver
-      remote: andre-tm-hui
+      remote: fl0rp
       revision: pmw3360
   self:
     path: config
